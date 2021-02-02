@@ -1,0 +1,43 @@
+.opning-hours{
+  width:70vw;
+  align-self: center;
+  padding: 10px ;
+  margin: 10px 0;
+
+  
+}
+.open-hours{
+  text-decoration: none;
+  font-size: 1em;
+  outline: 0;
+  clear: both;
+  color: rgb(82, 86, 94);
+  border-color: rgb(232, 232, 236);
+  padding: 12px 0;
+  font-size: 90%;
+  line-height: 150%;
+  border-bottom: 1px dashed #eee;
+}
+
+.opning-hours:before, .opning-hours:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  content: "\0020";
+    height: 0;
+    overflow: hidden;
+}
+
+.day{
+  float: left;
+  min-width: 85px;
+  font-weight: 700;
+}
+.open-time{
+  color: rgb(139, 142, 150);
+  float: right;
+    min-width: 50px;
+    text-align: right;
+    color: #888;
+}
