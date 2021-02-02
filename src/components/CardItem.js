@@ -10,7 +10,7 @@ export default function CardItem(props) {
           {/*eslint-disable-next-line*/}
           <img
             className='cards__item__img'
-            alt='Travel Image'
+            alt='Dogood Express'
             src={props.src}
           />
         </figure>

@@ -29,6 +29,11 @@
   align-items: center;
 }
 
+.nav__logo{
+  height: 7rem;
+  word-wrap: auto;
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
@@ -50,7 +55,7 @@
 }
 
 .nav-links {
-  color: gray;
+  color: #1f70c1;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -68,7 +73,7 @@
 }
 
 .fa-bars {
-  color: gray;
+  color: #1f70c1;
 }
 
 .nav-links-mobile {
@@ -97,7 +102,7 @@
   }
 
   .nav-menu.active {
-    background: #242222;
+    background: #fff;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -119,9 +124,8 @@
 
   .navbar-logo {
     position: absolute;
-    top: 0;
+    top: -1;
     left: 0;
-    transform: translate(25%, 50%);
   }
 
   .menu-icon {
@@ -135,7 +139,7 @@
   }
 
   .fa-times {
-    color: gray;
+    color: #1f70c1;
     font-size: 2rem;
   }
 

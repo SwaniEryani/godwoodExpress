@@ -5,7 +5,6 @@ import './ContentDetails.css';
 export default function ContentDetails() {
   return (
     <>
-      <h1 className="contact_us">Contact Us</h1>
       <div class="container">
         <div className="title">
           <h2>Our Location</h2>

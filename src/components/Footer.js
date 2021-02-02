@@ -32,10 +32,9 @@ export default function Footer() {
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>Find us on</h2>
-            <Link to="/">Instagram</Link>
-            <Link to="/">Facebook</Link>
-            <Link to="/">Youtube</Link>
-            <Link to="/">Twitter</Link>
+            <a href="https://www.instagram.com/dogwoodexpress/" >Instagram</a>
+            <a href="https://www.facebook.com/dogwoodexpress" >Facebook</a>
+            <a href="https://twitter.com/DogwoodExpress" >Twitter</a>
           </div>
         </div>
       </div>
@@ -46,48 +45,29 @@ export default function Footer() {
               DOGWOOD EXPRESS
             </Link>
           </div>
-          <small className="website-rights">Dodwood Express Market © 2021</small>
+          <small className="website-rights">Dogwood Express Market © 2021</small>
           <div className="social-icons">
-            <Link
+            <a
               className="social-icon-link facebook"
-              to="/"
-              target="_blank"
+              href="https://www.facebook.com/dogwoodexpress"
               aria-label="Facebook"
             >
               <i className="fab fa-facebook-f" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link instagram"
-              to="/"
-              target="_blank"
+              href="https://www.instagram.com/dogwoodexpress/"
               aria-label="Instagram"
             >
               <i className="fab fa-instagram" />
-            </Link>
-            <Link
-              className="social-icon-link youtube"
-              to="/"
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <i className="fab fa-youtube" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="social-icon-link twitter"
-              to="/"
-              target="_blank"
+              href="https://twitter.com/DogwoodExpress"
               aria-label="Twitter"
             >
               <i className="fab fa-twitter" />
-            </Link>
-            <Link
-              className="social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i className="fab fa-linkedin" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
