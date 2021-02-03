@@ -1,55 +1,38 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running port 5000"));
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+require('dotenv').config();
 
 const EMAIL = process.env.EMAIL;
 const PASS = process.env.EMAIL_PASSWORD;
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
+app.use(cookieParser());
 
-const contactEmail = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: EMAIL,
-    pass: PASS,
-  },
-});
+const { transporter } = require('./mail');
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
-  }
-});
 
-router.post("/contact-us", async (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const mail = {
-    from: name,
-    to: "process.env.EMAIL",
-    subject: "Contact Form Submission",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Message: ${message}</p>`,
-  };
+app.post("/api/sendMail", async (req, res) => {
 
   try {
-    await contactEmail.sendMail(mail);
-  } catch (e) {
-    if (e) {
-      res.json({ status: "ERROR" });
-    } else {
-      res.json({ status: "Message Sent" });
-    }
+    await transporter.sendMail({
+      from: ` ${req.body.email}`,
+      to: `${EMAIL}`,
+      subject: "New contact us message ",
+      html: `<h4>Sender:</h4>
+              <p>${req.body.email}</p>
+              <h1>${req.body.subject}</h1>
+              <p>${req.body.message}</p>`
+              
+    })
+  } catch(e) {
+      console.log(e)
   }
-});
+
+res.send('<h1>Thank you. We will get back to you soon </h1>');
+})
+
+app.listen(5000,  () => {
+    console.log( "Server Running at 5000 ");
+})

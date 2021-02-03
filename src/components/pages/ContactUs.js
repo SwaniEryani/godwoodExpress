@@ -15,10 +15,13 @@ export default function ContactUs() {
             </div>
             <div class="row">
               <div class="column">
-                <img className="contect-img" src="images/img-8.jpg" alt=""/>
+                <img className="contect-img" src="images/img-13.jpg" alt=""/>
               </div>
               <div class="column">
-                <ContactForm />
+                {/* <ContactForm /> */}
+                <p>You can send us an email</p>
+
+              <p><a href="mailto:info@dogwoodexpress.com">info@dogwoodexpress.com</a></p>
               </div>
             </div>
           </div>

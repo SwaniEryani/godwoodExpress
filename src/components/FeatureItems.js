@@ -29,7 +29,7 @@ export default function FeatureItems() {
             />
             <FeatureItem
               src='images/img-3.jpg'
-              text='Propane'
+              text='Propane & Ice cooler'
             />
             <FeatureItem
               src='images/img-5.jpg'
@@ -39,7 +39,7 @@ export default function FeatureItems() {
           <ul className='feature__items'>
             <FeatureItem
               src='../images/img-12.jpg'
-              text='Food and Drinks'
+              text='Food, Drinks, Groceries & Snacks'
             />
             <FeatureItem
               src='images/img-11.jpg'
@@ -61,7 +61,7 @@ export default function FeatureItems() {
             />
             <FeatureItem
               src='images/img-13.jpg'
-              text='Beverages'
+              text='Lotteries & sanks'
             />
           </ul>
           <ul className='feature__items'>
@@ -71,11 +71,11 @@ export default function FeatureItems() {
             />
             <FeatureItem
               src='images/img-15.jpg'
-              text='Groceries & Snacks'
+              text='liquor and beer'
             />
             <FeatureItem
               src='images/img-14.jpg'
-              text='Cappuccino'
+              text='Cappuccino, Coffee, Latte & Ice cream '
             />
           </ul>
           
